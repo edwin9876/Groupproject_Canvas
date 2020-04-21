@@ -7,12 +7,12 @@ class DrawRect extends PaintFunc{
     onMd(coord,e) {
 
     }
-   onDrag(coord,e) {
-       this.ctxD.beginPath()
-       this.ctxD.moveTo(coord[0],coord[1])
-       this.ctxD.lineTo(e.offsetX, e.offsetY);
-       this.ctxD.stroke();
-       [origX, origY] = [e.offsetX, e.offsetY];	
+   onDrag(coord,coord2,e) {
+    [coord2[0], coord2[1]] = [e.offsetX, e.offsetY]
+    ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
+    ctxD.beginPath();
+    ctxD.rect(coord[0], coord[1], coord2[0] - coord[0], coord2[1] - coord[1]);
+    ctxD.stroke();
     }
    onMm(coord,e) {
 

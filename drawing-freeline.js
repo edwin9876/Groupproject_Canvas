@@ -7,7 +7,7 @@ class FreeDraw extends PaintFunc {
     onMd(coord, e) {
 
     }
-    onDrag(coord, e) {
+    onDrag(coord, coord2,e) {
         this.ctxD.beginPath()
         this.ctxD.moveTo(coord[0], coord[1])
         this.ctxD.lineTo(e.offsetX, e.offsetY);

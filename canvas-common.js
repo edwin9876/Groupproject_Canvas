@@ -3,7 +3,7 @@ let ctxR = canvasR.getContext('2d');
 let canvasD = document.getElementById("canvasD");
 let ctxD = canvasD.getContext('2d');
 let dragging = false;
-let mX, mY, origX, origY
+let origX, origY,mX,mY
 ctxD.strokeStyle = 'black';
 ctxD.lineJoin = 'round';
 ctxD.lineCap = 'round';
@@ -16,7 +16,7 @@ $("#canvasD").mousedown(function (e) {
 
 $("#canvasD").mousemove(function (e) {
   if (dragging) {
-    currentFunction.onDrag([origX, origY], e);
+    currentFunction.onDrag([origX, origY],[mX,mY], e);
   }
   currentFunction.onMm([mX, mY], e);
 })
