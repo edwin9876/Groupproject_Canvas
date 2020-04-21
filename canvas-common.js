@@ -3,44 +3,40 @@ let ctxR = canvasR.getContext('2d');
 let canvasD = document.getElementById("canvasD");
 let ctxD = canvasD.getContext('2d');
 let dragging = false;
+let mX, mY, origX, origY
 
 $("#canvasD").mousedown(function (e) {
-  let mX = e.offSetX();
-  let mY = e.offSetY();
+  [origX, origY] = [e.offsetX, e.offsetY];
   dragging = true;
-  currentFunc.onMd([mX,mY],e);
+  currentFunction.onMd([mX, mY], e);
 })
 
-$("#canvasD").mouseover(function (e) {
-  let mX = e.offSetX();
-  let mY = e.offSetY();
+$("#canvasD").mousemove(function (e) {
+  [origX, origY] = [e.offsetX, e.offsetY];
   if (dragging) {
-    currentFunc.OnDrag([mX,mY],e);
+    currentFunction.onDrag([origX, origY], e);
   }
-  currentFunc.onMm([mX,mY],e);
+  currentFunction.onMm([mX, mY], e);
 })
 $("#canvasD").mouseleave(function (e) {
-  let mX = e.offSetX();
-  let mY = e.offSetY();
+  [origX, origY] = [e.offsetX, e.offsetY];
   dragging = false;
-  currentFunc.onMl([mX,mY],e);
+  currentFunction.onMl([mX, mY], e);
 })
 $("#canvasD").mouseup(function (e) {
-  let mX = e.offSetX();
-  let mY = e.offSetY();
+  [origX, origY] = [e.offsetX, e.offsetY];
   dragging = false;
-  currentFunc.onMu([mX,mY],e);
+  currentFunction.onMu([mX, mY], e);
 })
 $("#canvasD").mouseenter(function (e) {
-  let mX = e.offSetX();
-  let mY = e.offSetY();
-  currentFunc.onMe([mX,mY],e);
+  [origX, origY] = [e.offsetX, e.offsetY];
+  currentFunction.onMe([mX, mY], e);
 })
 
-class Paintfunc {
+class PaintFunc {
   contructor() { }
   onMd() { }
-  OnDrag() { }
+  onDrag() { }
   onMm() { }
   onMu() { }
   onMl() { }
