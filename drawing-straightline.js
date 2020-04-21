@@ -19,11 +19,12 @@ class DrawStraightLine extends PaintFunc {
 
 
     }
-    onMu(coord, e) {
-        // this.ctxD.beginPath()
-        // this.ctxD.moveTo(coord[0],coord[1])
-        // this.ctxD.lineTo(e.offsetX, e.offsetY);
-        // this.ctxD.stroke();
+    onMu(coord,coord2, e) {
+        ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
+        ctxR.beginPath();
+        ctxR.moveTo(coord[0],coord[1])
+        ctxR.lineTo(coord2[0], coord2[1]);
+        ctxR.stroke();
     }
     onMl(coord, e) {
 

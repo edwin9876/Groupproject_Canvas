@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
-    <canvas id="canvasD" width="1000" height="1000" style='border:1px black dotted'></canvas>
-    <canvas id="canvasR" ></canvas>
-
+    <canvas class="canvas" id="canvasR" width="1000" height="1000" style='border:1px black dotted'></canvas>
+    <canvas class="canvas" id="canvasD" width="1000" height="1000"></canvas>
     <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
         integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
-        <script src="canvas-common.js"></script>
-        <script src="drawing-freeline.js"></script>
-        <script src="drawing-rectangle.js"></script>
-        <script src="drawing-oval.js"></script>
-        <script src="drawing-straightline.js"></script>
-        <script type="text/javascript">
-        let currentFunction = new DrawStraightLine(ctxR,ctxD);
-</script>
+    <script src="canvas-common.js"></script>
+    <script src="drawing-freeline.js"></script>
+    <script src="drawing-rectangle.js"></script>
+    <script src="drawing-oval.js"></script>
+    <script src="drawing-straightline.js"></script>
+    <script type="text/javascript">
+        let currentFunction = new DrawOval(ctxR, ctxD);
+    </script>
 </body>
 
 </html>

@@ -18,14 +18,17 @@ class DrawOval extends PaintFunc {
         ctxD.stroke();
     }
     onMm(coord, e) {
-
+        
 
     }
-    onMu(coord, e) {
-        // this.ctxD.beginPath()
-        // this.ctxD.moveTo(coord[0],coord[1])
-        // this.ctxD.lineTo(e.offsetX, e.offsetY);
-        // this.ctxD.stroke();
+    onMu(coord,coord2, e) {
+        ctxD.clearRect(0, 0, canvasD.width, canvasD.height)
+        ctxR.beginPath();
+        ctxR.moveTo(coord[0], coord[1] + (coord2[1] - coord[1]) / 2)
+        ctxR.bezierCurveTo(coord[0], coord[1], coord2[0], coord[1], coord2[0], coord[1] + (coord2[1] - coord[1]) / 2);
+        ctxR.bezierCurveTo(coord2[0], coord2[1], coord[0], coord2[1], coord[0], coord[1] + (coord2[1] - coord[1]) / 2);
+        ctxR.closePath()
+        ctxR.stroke();
     }
     onMl(coord, e) {
 

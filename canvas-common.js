@@ -26,9 +26,9 @@ $("#canvasD").mouseleave(function (e) {
   currentFunction.onMl([mX, mY], e);
 })
 $("#canvasD").mouseup(function (e) {
-  [origX, origY] = [e.offsetX, e.offsetY];
+  [mX, mY] = [e.offsetX, e.offsetY];
   dragging = false;
-  currentFunction.onMu([mX, mY], e);
+  currentFunction.onMu([origX, origY],[mX,mY], e);
 })
 $("#canvasD").mouseenter(function (e) {
   [origX, origY] = [e.offsetX, e.offsetY];
