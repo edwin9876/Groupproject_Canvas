@@ -10,31 +10,38 @@
 
 <body>
 
-    <div class="wrapContainer">
+    <!-- Nav -->
+    <div class="topNav">
+        <h1 id="logo">E&P CANVAS</h1>
+        <div id="does">
+            <img src="Asset/undo.svg" id="undo" class="do" alt="undo">
+            <img src="Asset/redo.svg" id="redo" class="do" alt="redo">
+        </div>
+    </div>
 
+    <div class="wrapContainer">
         <!-- canvas -->
         <div class="container" id="DrawingCanvs">
-            <div class="top">
-                <h1>E&P CANVAS
-                </h1>
-<div class="does">
-                <img src="undo.svg" id="undo" class="do" alt="undo">
-                <img src="redo.svg" id="redo" class="do" alt="redo">
-            </div>
-            </div>
-
             <canvas id="canvas" width="1800px" height="800px">canvas</canvas>
         </div>
 
         <!-- functions -->
-        <div class="container" id="FunctionBox">
+        <div class="container">
             <div class="buttons">
                 <button class="button" id="colourBtn">Colours</button>
                 <button class="button" id="toolBtn">Tools</button>
-                <button class="button" id="shapeBtn">Shapes</button>
+
             </div>
             <!-- Colour -->
             <div id="Colours" class="Function">
+
+                <div id="PXbtn">
+                    <button class="linethickness button">2px</button>
+                    <button class="linethickness button">4px</button>
+                    <button class="linethickness button">8px</button>
+                    <button class="linethickness button">16px</button>
+                </div>
+
 
                 <div class="section1 row">
                     <div class="row1">
@@ -42,6 +49,8 @@
                         <div class="colourball red"></div><br>
                         <div class="colourball blue"></div><br>
                     </div>
+
+
 
                     <div class="row2">
                         <div class="colourball black"></div><br>
@@ -65,7 +74,7 @@
 
 
 
-                <!-- colourwheel -->
+                <!-- colourwheel, display on click-->
                 <div id="colourwheel" class="hidden">
                     <div class="row1">
                         <div id="c1" class="indicolour"></div>
@@ -190,50 +199,59 @@
                 </div>
             </div>
 
-            <!-- Tools -->
-            <div id="Tools" class="Function hidden row">
+            <!-- ToolBox -->
 
-                <div class="row1">
-                    <img class="icon" src="straightline.png" alt="straightline">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
+            <div id="Tools" class="Function hidden">
+
+                <div id="PXbtn">
+                    <button class="linethickness button">2px</button>
+                    <button class="linethickness button">4px</button>
+                    <button class="linethickness button">8px</button>
+                    <button class="linethickness button">16px</button>
                 </div>
 
-                <div class="row2">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                    <img class="icon" src="freedraw.png" alt="freedraw">
-                </div>
-            </div>
-            <!-- Shapes -->
-            <div id="Shapes" class="Function hidden row">
-                <div class="row1">
-                    <img src="triangle.svg" alt="triangle" class="icon">
-                    <img src="rectangle.svg" alt="rectangle" class="icon"> <img src="circle.svg" alt="circle"
-                        class="icon">
-                    <img src="circle.svg" alt="circle" class="icon">
+                <div class="section1">
+                    <div class="row1">
+                        <img class="icon" src="asset/pen.png" alt="pen">
+                        <img class="icon" src="asset/pencil.png" alt="pencil">
+                    </div>
                     <div class="row2">
-                        <img src="triangle.svg" alt="triangle" class="icon">
-                        <img src="rectangle.svg" alt="rectangle" class="icon">
-                        <img src="circle.svg" alt="circle" class="icon">
-                        <img src="circle.svg" alt="circle" class="icon">
+                        <img class="icon" src="asset/brush.png" alt="brush">
+                        <img class="icon" src="asset/bucket.png" alt="bucket">
                     </div>
                 </div>
 
+                <div class="section2">
+                    <div class="row1">
+                        <img class="icon" src="asset/circle.svg" alt="">
+                        <img class="icon" src="asset/rectangle.svg" alt="">
+                    </div>
+                    <div class="row2">
+                        <img class="icon" src="asset/triangle.svg" alt="">
+                        <img class="icon" src="asset/diamond.png" alt="">
+                    </div>
+                    <div class="row3">
+                        <img class="icon" src="asset/pentagon.png" alt="">
+                        <img class="icon" src="asset/bubble.png" alt="">
+                    </div>
+                </div>
             </div>
 
 
-            <!-- Jquery/canvascomment/Different drawing or shaping.js files/init.js -->
+
+
+
+
+
+            <!-- ORDER: Jquery/canvascommon/shapes/init -->
 
             <!-- Jquery -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <!-- CanvasCommon -->
-            <script src="script.js"></script>
+            <script src="FunctionBox.js"></script>
             <!-- Shape -->
             <script src="diamond.js"></script>
-            <!-- <script src="textbox.js"></script> -->
+
 
 
 </body>
