@@ -20,7 +20,7 @@
 .do{width: 4rem;
     height: 3rem;
     }
-.do:hover{height: 3.1rem;}
+.do:hover{filter:opacity(50%)}
 
 .wrapContainer{
     margin-top: 1rem;
