@@ -11,13 +11,18 @@
 <body>
 
     <!-- Nav -->
+    <video autoplay muted loop id="myVideo" src="asset/starvid.mp4"></video>
     <div class="topNav">
         <h1 id="logo">E&P CANVAS</h1>
         <div id="does">
-            <img src="Asset/undo.svg" id="undo" class="do" alt="undo">
-            <img src="Asset/redo.svg" id="redo" class="do" alt="redo">
+            <img src="Asset/undo.png" id="undo" class="do hover" alt="undo">
+            <img src="Asset/redo.png" id="redo" class="do hover" alt="redo">
         </div>
     </div>
+    <!-- 
+    <div id="textwrap">
+        <textarea id="inputbox">Hello world</textarea>
+    </div> -->
 
     <div class="wrapContainer">
         <!-- canvas -->
@@ -45,7 +50,7 @@
 
                 <div class="section1 row">
                     <div class="row1">
-                        <div class="colourball"></div><br>
+                        <div class="colourball white"></div><br>
                         <div class="colourball red"></div><br>
                         <div class="colourball blue"></div><br>
                     </div>
@@ -234,6 +239,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
 
 
@@ -241,14 +248,14 @@
 
 
 
-            <!-- ORDER: Jquery/canvascommon/shapes/init -->
+    <!-- ORDER: Jquery/canvascommon/shapes/init -->
 
-            <!-- Jquery -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <!-- CanvasCommon -->
-            <script src="FunctionBox.js"></script>
-            <!-- Shape -->
-            <script src="diamond.js"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- CanvasCommon -->
+    <script src="FunctionBox.js"></script>
+    <!-- Shape -->
+    <script src="diamond.js"></script>
 
 
 
